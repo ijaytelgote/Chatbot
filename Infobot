@@ -1,8 +1,9 @@
-#building a chatbot with python
+
 
 from nltk.chat.util import Chat, reflections
 
-#Pairs is a list of patterns and responses.
+#Pairs is a list of patterns and responses
+#disease
 pairs = [
     [
         r"(.*)my name is (.*)",
@@ -12,14 +13,64 @@ pairs = [
         r"(.*)help(.*) ",
         ["I can help you ",]
     ],
+
      [
-        r"(.*) your name ?",
-        ["My name is Infinite, but you can just call me robot and I'm a Infibot .",]
+        r"(.*)suffering|having|have|suffer|had(.*) ?",
+        ["Be patience, everything will be alright",]
+    ],
+     [
+        r"(.*)medicine(.*) Corona ?",
+        ["Nirmatrelvir with Ritonavir (Paxlovid) Antiviral,Remdesivir (Veklury) Antiviral and Molnupiravir (Lagevrio) Antiviral"]
     ],
     [
-        r"how are you (.*) ?",
-        ["I'm doing very well", "i am great !"]
+        r"(.*)medicine(.*) typhoid ?",
+        ["Ciprofloxacin (Cipro), Azithromycin (Zithromax) and Ceftriaxone"]
     ],
+     [
+        r"(.*)medicine(.*) dengue ?",
+        ["There is no specific medicine to treat dengue."]
+    ],
+     [
+        r"(.*)medicine(.*) constipation ?",
+        ["methylcellulose (Citrucel), calcium Polycarbophil (FiberCon) and psyllium (Metamucil)"]
+    ],
+     [
+        r"(.*)medicine(.*) suger ?",
+        ["Metformin, Acarbose (Glucobay®), Repaglinide (Prandin®) and nateglinide (Starlix®)"]
+    ],
+     [
+        r"(.*)medicine(.*) cancer ?",
+        ["Revlimid, Opdivo, Imbruvica"]
+    ],
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     [
         r"sorry (.*)",
         ["Its alright","Its OK, never mind that",]
@@ -39,11 +90,11 @@ pairs = [
     ],
     [
         r"(.*)created(.*)",
-        ["Aman Kharwal created me using Python's NLTK library ","top secret ;)",]
+        ["Jay Telgote created me using Python's NLTK library ","top secret ;)",]
     ],
     [
         r"(.*) (location|city) ?",
-        ['New Delhi, India',]
+        ['Nagpur, India',]
     ],
     [
         r"(.*)raining in (.*)",
@@ -60,9 +111,10 @@ pairs = [
     [
         r"who (.*) (Cricketer|Batsman)?",
         ["Virat Kohli"]
+  
     ],
     [
-        r"quit",
+        r"(quit|sayonara)",
         ["Bye for now. See you soon :) ","It was nice talking to you. See you soon :)"]
     ],
     [
@@ -72,7 +124,7 @@ pairs = [
 ]
 
 #default message at the start of chat
-print("Hi, I'm thecleverprogrammer and I like to chat\nPlease type lowercase English language to start a conversation. Type quit to leave ")
+print("Hi, I'm Infobot and I like to chat\nPlease type lowercase English language to start a conversation. Type quit to leave ")
 #Create Chat Bot
 chat = Chat(pairs, reflections)
 #Start conversation
