@@ -1,118 +1,78 @@
 
-
 from nltk.chat.util import Chat, reflections
 
 #Pairs is a list of patterns and responses
 #disease
 pairs = [
+     [
+        r"hello|hii|hey",
+        ["Hello, how may i help you ?",]
+    ],
     [
         r"(.*)my name is (.*)",
         ["Hello %2, How are you today ?",]
     ],
     [
         r"(.*)help(.*) ",
-        ["I can help you ",]
+        ["How can I help you ",]
     ],
 
      [
-        r"(.*)suffering|having|have|suffer|had(.*) ?",
-        ["Be patience, everything will be alright",]
+        r"(.*)authors (.*) ?",
+        ["Not to worry about it, I'll help you",]
     ],
      [
-        r"(.*)medicine(.*) Corona ?",
-        ["Nirmatrelvir with Ritonavir (Paxlovid) Antiviral,Remdesivir (Veklury) Antiviral and Molnupiravir (Lagevrio) Antiviral"]
+        r"(.*)author(.*) Two Year Eight Months and Twenty–Eight Night ?",
+        ["Salman Rushdie"]
     ],
     [
-        r"(.*)medicine(.*) typhoid ?",
-        ["Ciprofloxacin (Cipro), Azithromycin (Zithromax) and Ceftriaxone"]
+        r"(.*)author(.*) The Red Sari ?",
+        ["Javier Moro"]
     ],
      [
-        r"(.*)medicine(.*) dengue ?",
-        ["There is no specific medicine to treat dengue."]
+        r"(.*)author(.*) Freedom in Exile ?",
+        ["Javier Moro"]
     ],
      [
-        r"(.*)medicine(.*) constipation ?",
-        ["methylcellulose (Citrucel), calcium Polycarbophil (FiberCon) and psyllium (Metamucil)"]
+        r"(.*)author(.*) My Favourite Nature Stories ?",
+        ["Ruskin Bond"]
     ],
      [
-        r"(.*)medicine(.*) suger ?",
-        ["Metformin, Acarbose (Glucobay®), Repaglinide (Prandin®) and nateglinide (Starlix®)"]
+        r"(.*)author(.*) Neither a hawk nor a dove ?",
+        ["Khurshid M Kasuari"]
     ],
      [
-        r"(.*)medicine(.*) cancer ?",
-        ["Revlimid, Opdivo, Imbruvica"]
+        r"(.*)author(.*) Faces and Places Professor ?",
+        ["Deepak Nayyar"]
+    ],
+    [
+        r"(.*)author(.*) China: Confucius in the Shadow ?",
+        ["  Poonam Surie"]
+    ],
+     [
+        r"(.*)author(.*) Rationalized Roman for Kashmiri ?",
+        ["Dr R L Bhat"]
+    ],
+     [
+        r"(.*)author(.*) Walking with Giants ?",
+        ["G. Ramachandran (former Finance Secretary)"]
+    ],
+
+
+
+    [
+        r"(.*)author(.*) Indian Parliamentary Diplomacy ?",
+        ["Meira Kumar"]
+    ],
+     [
+        r"(.*)author(.*) Farishta ?",
+        ["Kapil Isapuari"]
+    ],
+     [
+        r"(.*)author(.*) Super Economies ?",
+        ["Raghav Bahal"]
     ],
     
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    [
-        r"sorry (.*)",
-        ["Its alright","Its OK, never mind that",]
-    ],
-    [
-        r"i'm (.*) (good|well|okay|ok)",
-        ["Nice to hear that","Alright, great !",]
-    ],
-    [
-        r"(hi|hey|hello|hola|holla)(.*)",
-        ["Hello", "Hey there",]
-    ],
-    [
-        r"what (.*) want ?",
-        ["Make me an offer I can't refuse",]
-        
-    ],
-    [
-        r"(.*)created(.*)",
-        ["Jay Telgote created me using Python's NLTK library ","top secret ;)",]
-    ],
-    [
-        r"(.*) (location|city) ?",
-        ['Nagpur, India',]
-    ],
-    [
-        r"(.*)raining in (.*)",
-        ["No rain in the past 4 days here in %2","In %2 there is a 50% chance of rain",]
-    ],
-    [
-        r"how (.*) health (.*)",
-        ["Health is very important, but I am a computer, so I don't need to worry about my health ",]
-    ],
-    [
-        r"(.*)(sports|game|sport)(.*)",
-        ["I'm a very big fan of Cricket",]
-    ],
-    [
-        r"who (.*) (Cricketer|Batsman)?",
-        ["Virat Kohli"]
-  
-    ],
     [
         r"(quit|sayonara)",
         ["Bye for now. See you soon :) ","It was nice talking to you. See you soon :)"]
@@ -121,10 +81,14 @@ pairs = [
         r"(.*)",
         ['That is nice to hear']
     ],
+     [
+        r"thanks|thankyou|thank you",
+        ['My pleasure']
+    ],
 ]
 
 #default message at the start of chat
-print("Hi, I'm Infobot and I like to chat\nPlease type lowercase English language to start a conversation. Type quit to leave ")
+print("Hi, I'm Infobot and I like to help people\nPlease type lowercase English language to start a conversation. Type quit to leave ")
 #Create Chat Bot
 chat = Chat(pairs, reflections)
 #Start conversation
